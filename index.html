@@ -35,11 +35,15 @@
             </div>
         </div>
 
-        <div id="whitelistInput" class="name-input">
-            <input type="text" placeholder=""
-                style="transition: height 0.3s; height: 0px; background-color: transparent;" onfocus="tryWhitelist()">
-            <img src="paper-plane-solid.svg" alt="Send" onclick="sendUsername()">
+        <div style="display: flex; width: 550px; max-width: 100% ; justify-content: center; margin: auto;">
+            <div id="whitelistInput" class="name-input">
+                <input type="text" placeholder=""
+                    style="transition: height 0.3s; height: 0px; background-color: transparent;"
+                    onfocus="tryWhitelist()">
+                <img src="paper-plane-solid.svg" alt="Send" onclick="sendUsername()">
+            </div>
         </div>
+
 
         <div class="headline">
             <p class="whitelist-message" id="success"><b>You have been successfully whitelisted!</b> You can join in
@@ -149,12 +153,17 @@
     </div>
 
     <footer>
-        <p><b>Wings of Fire: The New World</b></p>
-        <p><a href="https://discord.gg/YyWWPEbA7z" , target="_blank">Discord</a></p>
-        <p><a href="https://youtube.com/@woftnw" , target="_blank">YouTube</a></p>
-        <p><a href="https://woftnw.redbubble.com/" , target="_blank">Redbubble</a></p>
-        <p><a href="https://www.patreon.com/woftnw" , target="_blank">Patreon</a></p>
-        <p><a href="http://bogthemudwing.ddns.net" , target="_blank">Wiki</a></p>
+        <div>
+            <p><b>Wings of Fire: The New World</b></p>
+        </div>
+        <div>
+            <p><a href="https://discord.gg/YyWWPEbA7z" , target="_blank">Discord</a></p>
+            <p><a href="https://youtube.com/@woftnw" , target="_blank">YouTube</a></p>
+            <p><a href="https://woftnw.redbubble.com/" , target="_blank">Redbubble</a></p>
+            <p><a href="https://www.patreon.com/woftnw" , target="_blank">Patreon</a></p>
+            <p><a href="http://bogthemudwing.ddns.net" , target="_blank">Wiki</a></p>
+        </div>
+
         <br>
     </footer>
 
@@ -190,7 +199,7 @@
             whitelistInput.hidden = false;
             whitelistInput.style.backgroundColor = "white";
             whitelistInput.style.height = "50px";
-            whitelistInput.style.width = "550px";
+            whitelistInput.style.width = "100%";
             whitelistInput.children[0].style.display = "block";
             whitelistInput.children[1].style.display = "block";
             whitelistInput.children[0].style.height = "50px";
@@ -269,7 +278,7 @@
                     .catch(error => {
                         console.error("Error:", error);
                         // Handle errors, e.g., show an error message to the user
-                        alert("An error occurred while processing the username.");
+                        alert("An error occurred: " + error.name + "\n" + error.message + "\n\nThe server may be offline or inaccessable. Try again later.");
                     });
             }
 
