@@ -3,16 +3,21 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lato', 'Liberation Sans', 'Noto Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
     font-size: x-large;
     line-height: 1.5;
-    background-color: rgb(212, 212, 212);
-    color: black;
+    background: #1d3c39;
+    color: white;
     margin: 0px auto;
 }
 
+
+a {
+    color: white;
+}
+
 hr {
-    color: black;
+    color: white;
     width: 100%;
 }
 
@@ -30,6 +35,12 @@ hr {
 
 .headline {
     text-align: center;
+}
+
+.disclaimer {
+    text-transform: uppercase;
+    color: #ccc;
+    font-size: medium;
 }
 
 h1 {
@@ -61,7 +72,7 @@ footer {
     gap: 20px;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     margin: 0;
     height: 100px;
     padding: 0 50px 0;
@@ -69,6 +80,16 @@ footer {
 
 footer .div {
     max-width: 1000px;
+}
+
+footer a {
+    color: white;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+footer a:hover {
+    text-shadow: 0 0 5px white;
+    letter-spacing: 1px;
 }
 
 .title-gradient1 {
@@ -94,12 +115,15 @@ footer .div {
     border-radius: 10px;
     padding: 10px 20px;
     text-decoration: none;
-    transition: 0s;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .button-primary:hover {
+    text-shadow: 0 0 5px white;
+    box-shadow: 0 0 10px black;
+    letter-spacing: 1px;
+    padding: 10px 30px;
     background-color: rgb(25, 79, 150);
-    transition: 0s;
 }
 
 .button-secondary {
@@ -110,12 +134,14 @@ footer .div {
     border-radius: 10px;
     padding: 10px 20px;
     text-decoration: none;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .button-secondary:hover {
     cursor: pointer;
+    letter-spacing: 1px;
+    padding: 10px 30px;
     background-color: rgba(36, 36, 36, 0.795);
-    transition: 0s;
 }
 
 .button-secondary:active {
@@ -124,14 +150,20 @@ footer .div {
     transition: 0s;
 }
 
+.discord-embed {
+    border: none;
+    width: 600px;
+}
+
 .name-input {
     border-radius: 10px;
     height: 50px;
+    width: 0px;
     margin: 50px auto 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    transition: 0.3s;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .name-input input {
@@ -140,18 +172,18 @@ footer .div {
     text-align: center;
     border-radius: 10px;
     height: 0px;
-    width: 500px;
-    font-family: Arial, Helvetica, sans-serif;
+    width: 0px;
+    font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lato', 'Liberation Sans', 'Noto Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
     font-size: x-large;
     border: none;
-    transition: 0.3s;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .name-input input:focus {
     outline: none;
 }
 
-.name-input svg {
+.name-input img {
     display: none;
     align-self: center;
     margin: 10px;
@@ -159,14 +191,23 @@ footer .div {
     width: 35px;
 }
 
-.name-input svg:hover {
+.name-input img:hover {
     cursor: pointer;
+}
+
+.whitelist-message {
+    margin: 0px;
+    height: 0;
+    overflow: hidden;
+    color: transparent;
+
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .loader {
     border: 4px solid white;
     /* Light grey */
-    border-top: 4px solid rgb(31, 99, 187);
+    border-top: 4px solid blue;
     /* Blue */
     border-radius: 50%;
     width: 25px;
@@ -187,6 +228,13 @@ footer .div {
     }
 }
 
+.checkmark {
+    color: blue;
+    font-size: 38px;
+    margin: 0 10px;
+    line-height: 55px;
+}
+
 .sidebyside {
     align-self: center;
     display: flex;
@@ -196,8 +244,10 @@ footer .div {
     margin: 20px 0px;
 }
 
+
 .sidebyside img {
     width: 50%;
+    height: max-content;
 }
 
 .sidebyside h3 {
@@ -206,4 +256,23 @@ footer .div {
 
 .sidebyside div {
     width: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+    .sidebyside {
+        flex-direction: column;
+    }
+
+    .sidebyside img {
+        width: 100%;
+    }
+
+    .sidebyside div {
+        width: 100%;
+    }
+
+    .discord-embed {
+        width: 100%;
+    }
+
 }
