@@ -21,6 +21,15 @@ hr {
     width: 100%;
 }
 
+iframe {
+    border: none;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+iframe:hover {
+    box-shadow: 0 0 10px black;
+}
+
 .content {
     padding: 20px;
     display: flex;
@@ -33,8 +42,16 @@ hr {
     max-width: 100%;
 }
 
+.caption {
+    font-weight: 300;
+    text-align: center;
+    margin: 0 0 20px;
+    font-style: italic;
+}
+
 .headline {
     text-align: center;
+    font-weight: 600;
 }
 
 .disclaimer {
@@ -247,12 +264,6 @@ footer a:hover {
     gap: 20px;
     width: 100%;
     margin: 20px 0px;
-}
-
-
-.sidebyside img {
-    width: 50%;
-    height: max-content;
 }
 
 .sidebyside h3 {
