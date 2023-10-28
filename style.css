@@ -68,7 +68,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(99, 99, 99) url("Jupiter.png");
+    background: rgb(99, 99, 99) url("Jupiter.jpg");
     background-position: center;
     background-size: cover;
     background-blend-mode: multiply;
