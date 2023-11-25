@@ -12,172 +12,216 @@
 
 <body>
 
+
     <div class="banner">
         <img id="bannerimg" src="Wings of Fire_ The New World.png">
     </div>
 
-    <br>
+    <div class="alt-background">
+        <div class="content">
+            <h2 class="headline"><b>Wings of Fire: The New World</b> is a community-driven Minecraft: Java Edition
+                server
+                based on the <i>Wings of Fire</i> series of novels.</h2>
 
-    <div class="content">
-        <p class="headline"><b>Wings of Fire: The New World</b> is a community-driven Minecraft: Java Edition server
-            based on the <i>Wings of Fire</i> series of novels.</p>
+            <br>
 
-        <br>
-
-        <div class="button-line">
-            <a href="https://discord.gg/YyWWPEbA7z">
-                <div class="button-primary">
-                    Join the Discord server
+            <div class="button-line">
+                <a href="https://discord.gg/YyWWPEbA7z">
+                    <div class="button-primary">
+                        Join the Discord server
+                    </div>
+                </a>
+                <div class="button-secondary" onclick="revealWhitelist()">
+                    Don't have Discord?
                 </div>
-            </a>
-            <div class="button-secondary" onclick="revealWhitelist()">
-                Don't have Discord?
-            </div>
-        </div>
-
-        <div style="display: flex; width: 550px; max-width: 100% ; justify-content: center; margin: auto;">
-            <div id="whitelistInput" class="name-input">
-                <input type="text" placeholder=""
-                    style="transition: height 0.3s; height: 0px; background-color: transparent;"
-                    onfocus="tryWhitelist()">
-                <img src="paper-plane-solid.svg" alt="Send" onclick="sendUsername()">
-            </div>
-        </div>
-
-
-        <div class="headline">
-            <p class="whitelist-message" id="success"><b>You have been successfully whitelisted!</b> You can join in
-                Minecraft by adding a new server with the address <code>woftnw.duckdns.org</code>.</p>
-            <p class="whitelist-message" id="failure"><b>Something went wrong.</b> Make sure you've typed your username
-                exactly as shown in the buttom-right corner of the Minecraft launcher. You need to have a paid
-                Minecraft: Java Edition account to join.</p>
-        </div>
-
-        <hr>
-
-        <h2>Welcome to the World of Wings of Fire!</h2>
-        <p>Wings of Fire: The New World is a Minecraft: Java Edition dedicated server that aims to create the world of Wings of Fire in a
-            large-scale, player-interactive experience.</p>
-        <p>The server began in March of 2016 by ebelle. It started as a small whitelisted community
-            branching off of the Wings of Fire Fanon Wiki.
-            The map, currently in its fourth iteration, is custom made to
-            recreate Pyrrhia and Pantala from <i>Wings of Fire</i>. The server's story is set thousands of years
-            following the
-            canon events of the book series and boasts a unique cast of characters and an extensive new world full
-            of lore to explore!</p>
-        <p>The world has grown from <b>under 600 blocks</b> across to <b>nearly 10,000</b>.<br>
-            The staff team has grown from <b>one person</b> to <b>over twenty</b>.<br>
-            The community has grown from about <b>thirty-five members</b> to <b>well over a thousand</b>.</p>
-        <p><b>Check out what we've created!</b></p>
-
-        <div class="sidebyside">
-            <div>
-                <img src="screenshots/2023-08-02_12.27.27.png">
-                <p class="caption">RainWing Village</p>
-            </div>
-            <div>
-                <h3>The World of Wings of Fire</h3>
-                <p>Wings of Fire: The New World is currently the <b>largest</b> and <b>most complete</b> 3D recreation
-                    of Pyrrhia and Pantala from <i>Wings of Fire</i> and it's entirely open for your creation!</p>
-            </div>
-        </div>
-
-        <div class="sidebyside">
-            <div>
-                <h3>Elytras of Fire</h3>
-                <p>Elytras of Fire introduces three series-inspired and all-new abilities for each tribe. Get unique
-                    powers and abilities depending on which tribe you choose to play!</p>
-            </div>
-            <div>
-                <img src="screenshots/2023-07-28_11.57.32.png">
-                <p class="caption">A view of Jewel Hive</p>
-            </div>
-            
-        </div>
-
-        <div class="sidebyside">
-            <div>
-                <img src="screenshots/2023-08-29_15.04.17.png">
-                <p class="caption">The Hub</p>
-            </div>
-            <div>
-                <h3>Eye of Onyx</h3>
-                <p>WoF: TNW features the Eye of Onyx royalty system, which allows you to climb the ranks and become
-                    ruler of a kingdom! Challenge your superiors and compete in a mini-game to rise up the ranks and
-                    become the ruler of a kingdom.</p>
-            </div>
-        </div>
-
-        <p class="headline">We've come a long way from a small server to a flourishing, ever-growing community. Our staff team has continued to cultivate the server
-            in hopes of future generations of young readers to partake in a fun, safe server that they can enjoy. All
-            staff on the server are volunteers and are very passionate about keeping both the Discord and Minecraft community
-            safe.</p>
-
-        <img src="screenshots/Pyrrhia (Medium).png" alt="Map of Pyrrha" style="width: unset;">
-        <p class="caption">Pyrrhia - 9856 x 8448 blocks</p>
-
-        <img src="screenshots/Pantala (Medium).png" alt="Map of Pantala" style="width: unset;">
-        <p class="caption">Pantala - 5760 x 2632 blocks</p>
-
-        <h2>Want to see more? Check out our YouTube Channel!</h2>
-        <div class="sidebyside">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/m3oFmJAB9oY?si=rOZW7I0H49o7xc5t" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/iYTKLDFH6u0?si=9Tvt68_Bn8jLmEAW" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-
-        <div class="sidebyside">
-            <iframe class="discord-embed" title="Discord"
-                src="https://discord.com/widget?id=658004601869565962&theme=dark" width="350" height="500"
-                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-
-            <div>
-                <h3>Join the Community</h3>
-                <p>We have a wonderful, inviting, and vibrant community that has steadily been growing. We use Discord
-                    as our primary communication platform for announcments, events, and chatting!</p>
-                <p>Note that (per Discord's <a href="https://discord.com/terms/">Terms of Service</a>), you must be at
-                    least 13 years old or have the consent of
-                    your parent/guardian to create a Discord account.</p>
             </div>
 
-        </div>
-
-
-        <hr>
-
-        <h2 class="headline" style="margin: 10px 0 0;">Interested in joining?</h2>
-        <p class="headline">Our server requires your username to be added to a whitelist to be able to join. We
-            recommend you
-            join the Discord server to really get into the community, but you can also input your name here if you want.
-        </p>
-
-        <div class="button-line" style="margin: 0 0 20px;">
-            <a href="https://discord.gg/YyWWPEbA7z">
-                <div class="button-primary">
-                    Join the Discord server
+            <div style="display: flex; width: 550px; max-width: 100% ; justify-content: center; margin: 0 auto;">
+                <div id="whitelistInput" class="name-input">
+                    <input type="text" placeholder=""
+                        style="transition: height 0.3s; height: 0px; background-color: transparent;"
+                        onfocus="tryWhitelist()">
+                    <img src="paper-plane-solid.svg" alt="Send" onclick="sendUsername()">
                 </div>
-            </a>
-            <div class="button-secondary" onclick="revealWhitelist()">
-                Don't have Discord?
+            </div>
+
+
+            <div class="headline">
+                <p class="whitelist-message" id="success"><b>You have been successfully whitelisted!</b> You can join in
+                    Minecraft by adding a new server with the address <code>woftnw.duckdns.org</code>.</p>
+                <p class="whitelist-message" id="failure"><b>Something went wrong.</b> Make sure you've typed your
+                    username
+                    exactly as shown in the buttom-right corner of the Minecraft launcher. You need to have a paid
+                    Minecraft: Java Edition account to join.</p>
             </div>
         </div>
-
-        <hr>
-
-        <code
-            class="disclaimer">Wings of Fire: The New World is not affiliated with, endorsed by, or sponsored by Tui T. Sutherland, the author of Wings of Fire, or any entities associated with her. Wings of Fire and all related characters, locations, and elements are the intellectual property of Tui T. Sutherland. All rights to Wings of Fire and its content are exclusively owned by Tui T. Sutherland and her authorized publishers.
-                <br><br>
-                Wings of Fire: The New World and related assets are for entertainment purposes only. Any references to Wings of Fire, its characters, locations, or any other elements from the series are made with utmost respect to the original work. No infringement of copyright is intended.
-                <br><br>
-                All names, characters, places, and events referenced within Wings of Fire: The New World are used fictitiously or for the purpose of commentary, criticism, or parody. Any resemblance to actual persons, living or dead, or actual events is purely coincidental.
-                <br><br>
-                If you wish to explore or engage with the official Wings of Fire content, please visit authorized retailers or platforms where Tui T. Sutherland's work is officially represented.
-                <br><br>
-                We, the Wings of Fire: The New World administration, disclaim any responsibility for the misuse or misrepresentation of the content within Wings of Fire: The New World or any related assets. Users are encouraged to respect the intellectual property rights of Tui T. Sutherland and adhere to all relevant laws and regulations.
-                <br><br>
-                For inquiries regarding the use of Wings of Fire content, please contact the appropriate rights holders.</code>
-
-
     </div>
+
+    <div class="main-background">
+        <div class="content">
+            <h1>Welcome to the World of Wings of Fire!</h1>
+            <p>Wings of Fire: The New World is a Minecraft: Java Edition dedicated server that aims to create the world
+                of Wings of Fire in a
+                large-scale, player-interactive experience.</p>
+            <p>The server began in March of 2016 by ebelle. It started as a small whitelisted community
+                branching off of the Wings of Fire Fanon Wiki.
+                The map, currently in its fourth iteration, is custom made to
+                recreate Pyrrhia and Pantala from <i>Wings of Fire</i>. The server's story is set thousands of years
+                following the
+                canon events of the book series and boasts a unique cast of characters and an extensive new world full
+                of lore to explore!</p>
+            <p>The world has grown from <b>under 600 blocks</b> across to <b>nearly 10,000</b>.<br>
+                The staff team has grown from <b>one person</b> to <b>over twenty</b>.<br>
+                The community has grown from about <b>thirty-five members</b> to <b>well over a thousand</b>.</p>
+            <p><b>Check out what we've created!</b></p>
+
+            <hr>
+
+            <div class="sidebyside">
+                <div class="secondary-background">
+                    <img src="screenshots/2023-08-02_12.27.27.png">
+                    <p class="caption">RainWing Village</p>
+                </div>
+                <div>
+                    <h3>The World of Wings of Fire</h3>
+                    <p>Wings of Fire: The New World is currently the <b>largest</b> and <b>most complete</b> 3D
+                        recreation
+                        of Pyrrhia and Pantala from <i>Wings of Fire</i> and it's entirely open for your creation!</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="sidebyside">
+                <div>
+                    <h3>Elytras of Fire</h3>
+                    <p>Elytras of Fire introduces three series-inspired and all-new abilities for each tribe. Get unique
+                        powers and abilities depending on which tribe you choose to play!</p>
+                </div>
+                <div class="secondary-background">
+                    <img src="screenshots/2023-07-28_11.57.32.png">
+                    <p class="caption">A view of Jewel Hive</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="sidebyside">
+                <div class="secondary-background">
+                    <img src="screenshots/2023-08-29_15.04.17.png">
+                    <p class="caption">The Hub</p>
+                </div>
+                <div>
+                    <h3>Eye of Onyx</h3>
+                    <p>WoF: TNW features the Eye of Onyx royalty system, which allows you to climb the ranks and become
+                        ruler of a kingdom! Challenge your superiors and compete in a mini-game to rise up the ranks and
+                        become the ruler of a kingdom.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <h3 class="headline">We've come a long way from a small server to a flourishing, ever-growing community. Our
+                staff team has continued to cultivate the server
+                in hopes of future generations of young readers to partake in a fun, safe server that they can enjoy.
+                All
+                staff on the server are volunteers and are very passionate about keeping both the Discord and Minecraft
+                community
+                safe.</p>
+
+                <div class="secondary-background">
+
+
+                    <img src="screenshots/Pyrrhia (Medium).png" alt="Map of Pyrrha" style="width: unset;">
+                    <p class="caption">Pyrrhia - 9856 x 8448 blocks</p>
+                </div>
+
+                <p></p>
+
+                <div class="secondary-background">
+                    <img src="screenshots/Pantala (Medium).png" alt="Map of Pantala" style="width: unset;">
+                    <p class="caption">Pantala - 5760 x 2632 blocks</p>
+                </div>
+
+
+                <h2>Want to see more? Check out our YouTube channel</h2>
+                <div class="sidebyside">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/m3oFmJAB9oY?si=rOZW7I0H49o7xc5t"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iYTKLDFH6u0?si=9Tvt68_Bn8jLmEAW"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="sidebyside">
+                    <iframe class="discord-embed" title="Discord"
+                        src="https://discord.com/widget?id=658004601869565962&theme=dark" width="350" height="500"
+                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+                    <div>
+                        <h3>Join the Community</h3>
+                        <p>We have a wonderful, inviting, and vibrant community that has steadily been growing. We use
+                            Discord
+                            as our primary communication platform for announcments, events, and chatting!</p>
+                        <p>Note that (per Discord's <a href="https://discord.com/terms/">Terms of Service</a>), you must
+                            be
+                            at
+                            least 13 years old or have the consent of
+                            your parent/guardian to create a Discord account.</p>
+                    </div>
+
+                </div>
+
+        </div>
+    </div>
+
+    <div class="alt-background">
+
+        <div class="content">
+
+            <h2 class="headline" style="margin: 10px 0 0;">Interested in joining?</h2>
+            <p class="headline">Our server requires your username to be added to a whitelist to be able to join. We
+                recommend you
+                join the Discord server to really get into the community, but you can also input your name here if you
+                want.
+            </p>
+
+            <div class="button-line" style="margin: 0 0 20px;">
+                <a href="https://discord.gg/YyWWPEbA7z">
+                    <div class="button-primary">
+                        Join the Discord server
+                    </div>
+                </a>
+                <div class="button-secondary" onclick="revealWhitelist()">
+                    Don't have Discord?
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main-background">
+        <div class="content">
+
+            <code
+                class="disclaimer">Wings of Fire: The New World is not affiliated with, endorsed by, or sponsored by Tui T. Sutherland, the author of Wings of Fire, or any entities associated with her. Wings of Fire and all related characters, locations, and elements are the intellectual property of Tui T. Sutherland. All rights to Wings of Fire and its content are exclusively owned by Tui T. Sutherland and her authorized publishers.
+                    <br><br>
+                    Wings of Fire: The New World and related assets are for entertainment purposes only. Any references to Wings of Fire, its characters, locations, or any other elements from the series are made with utmost respect to the original work. No infringement of copyright is intended.
+                    <br><br>
+                    All names, characters, places, and events referenced within Wings of Fire: The New World are used fictitiously or for the purpose of commentary, criticism, or parody. Any resemblance to actual persons, living or dead, or actual events is purely coincidental.
+                    <br><br>
+                    If you wish to explore or engage with the official Wings of Fire content, please visit authorized retailers or platforms where Tui T. Sutherland's work is officially represented.
+                    <br><br>
+                    We, the Wings of Fire: The New World administration, disclaim any responsibility for the misuse or misrepresentation of the content within Wings of Fire: The New World or any related assets. Users are encouraged to respect the intellectual property rights of Tui T. Sutherland and adhere to all relevant laws and regulations.
+                    <br><br>
+                    For inquiries regarding the use of Wings of Fire content, please contact the appropriate rights holders.</code>
+
+        </div>
+    </div>
+
 
     <footer>
         <div>
@@ -224,20 +268,31 @@
 
             const whitelistInput = document.getElementById("whitelistInput");
             whitelistInput.hidden = false;
-            whitelistInput.style.backgroundColor = "white";
-            whitelistInput.style.height = "50px";
-            whitelistInput.style.width = "100%";
-            whitelistInput.children[0].style.display = "block";
-            whitelistInput.children[1].style.display = "block";
             whitelistInput.children[0].style.height = "50px";
-            whitelistInput.children[0].style.width = "auto";
-            whitelistInput.children[1].style.fill = "blue";
-            whitelistInput.children[0].placeholder = "Put your username here!";
+            whitelistInput.style.height = "50px";
+            whitelistInput.style.margin = "50px auto 50px";
             const y = whitelistInput.getBoundingClientRect().top + window.scrollY;
             window.scroll({
                 top: y - 300,
                 behavior: 'smooth'
             });
+
+
+            setTimeout(function () {
+
+                whitelistInput.style.backgroundColor = "white";
+                whitelistInput.style.width = "100%";
+                whitelistInput.children[0].style.display = "block";
+                whitelistInput.children[1].style.display = "block";
+                whitelistInput.children[0].style.width = "auto";
+                whitelistInput.children[1].style.fill = "blue";
+                whitelistInput.children[0].placeholder = "Put your username here!";
+                
+
+            }, 250);
+
+
+
 
         }
 
