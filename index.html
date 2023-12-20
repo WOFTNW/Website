@@ -53,6 +53,9 @@
                     username
                     exactly as shown in the buttom-right corner of the Minecraft launcher. You need to have a paid
                     Minecraft: Java Edition account to join.</p>
+                <p class="whitelist-message" id="disabled"><b>This has been temporarily disabled.</b> Sorry! Web
+                    whitelist has been temporarily disabled to fix some bugs. :( Join the Discord server or try again
+                    later.</p>
             </div>
         </div>
     </div>
@@ -253,15 +256,21 @@
         });
 
         function revealSuccessMessage() {
-            const successMessage = document.getElementById("success");
-            successMessage.style.height = "120px";
-            successMessage.style.color = "white";
+            const message = document.getElementById("success");
+            message.style.height = "120px";
+            message.style.color = "white";
         }
 
         function revealFailureMessage() {
-            const failureMessage = document.getElementById("failure");
-            failureMessage.style.height = "120px";
-            failureMessage.style.color = "white";
+            const message = document.getElementById("failure");
+            message.style.height = "120px";
+            message.style.color = "white";
+        }
+
+        function revealDisabledMessage() {
+            const message = document.getElementById("disabled");
+            message.style.height = "120px";
+            message.style.color = "white";
         }
 
         function revealWhitelist() {
@@ -287,7 +296,7 @@
                 whitelistInput.children[0].style.width = "auto";
                 whitelistInput.children[1].style.fill = "blue";
                 whitelistInput.children[0].placeholder = "Put your username here!";
-                
+
 
             }, 250);
 
@@ -326,11 +335,13 @@
 
                 // Send
 
+                /*
+
                 var username = whitelistInput.children[0].value;
                 console.log("Username:", username);
 
                 // Make an HTTP POST request to your Spark API endpoint
-                fetch("http://woftnw.duckdns.org:4567/process-username", {
+                fetch("https://woftnw.duckdns.org:4567/process-username", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded", // Set the appropriate content type
@@ -362,6 +373,14 @@
                         // Handle errors, e.g., show an error message to the user
                         alert("An error occurred: " + error.name + "\n" + error.message + "\n\nThe server may be offline or inaccessable. Try again later.");
                     });
+                     */
+
+                let checkmark = document.createElement('p');
+                checkmark.innerHTML = "&#x274c;";
+                revealDisabledMessage();
+                checkmark.classList.add("checkmark");
+                whitelistInput.children[1].replaceWith(checkmark);
+
             }
 
 
