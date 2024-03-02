@@ -181,7 +181,7 @@
                         <h3>Join the Community</h3>
                         <p>We have a wonderful, inviting, and vibrant community that has steadily been growing. We use
                             Discord
-                            as our primary communication platform for announcments, events, and chatting!</p>
+                            as our primary communication platform for announcements, events, and chatting!</p>
                         <p>Note that (per Discord's <a href="https://discord.com/terms/">Terms of Service</a>), you must
                             be
                             at
@@ -299,7 +299,6 @@
                 behavior: 'smooth'
             });
 
-
             setTimeout(function () {
 
                 whitelistInput.style.backgroundColor = "white";
@@ -310,12 +309,7 @@
                 whitelistInput.children[1].style.fill = "blue";
                 whitelistInput.children[0].placeholder = "Put your username here!";
 
-
             }, 250);
-
-
-
-
         }
 
         function tryWhitelist() {
@@ -355,10 +349,9 @@
                 fetch("https://macver.org:5000/whitelist", {
                     method: "POST",
                     headers: {
-                        "Content-Type": "application/x-www-form-urlencoded", // Set the appropriate content type
-                        "Access-Control-Allow-Origin": "*"
+                        "Content-Type": "application/x-www-form-urlencoded" // Set the appropriate content type
                     },
-                    body: "username=" + encodeURIComponent(username),
+                    body: "username=" + encodeURIComponent(username)
                 })
                     .then(response => response.json())
                     .then(data => {
@@ -385,11 +378,6 @@
                         // Handle errors, e.g., show an error message to the user
                         alert("An error occurred: " + error.name + "\n" + error.message + "\n\nThe server may be offline or inaccessable. Try again later.");
                     });
-
-                let checkmark = document.createElement('p');
-                checkmark.innerHTML = "&#x274c;";
-                checkmark.classList.add("checkmark");
-                whitelistInput.children[1].replaceWith(checkmark);
 
             }
 
