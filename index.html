@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wings of Fire: The New World</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -353,10 +352,11 @@
                 console.log("Username:", username);
 
                 // Make an HTTP POST request to your Spark API endpoint
-                fetch("https://cors.io/?https://macver.org:5000/whitelist", {
+                fetch("https://macver.org:5000/whitelist", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded", // Set the appropriate content type
+                        "Access-Control-Allow-Origin": "*"
                     },
                     body: "username=" + encodeURIComponent(username),
                 })
