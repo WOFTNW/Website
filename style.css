@@ -35,7 +35,7 @@ hr {
     position: absolute;
     border: none;
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    top: 0;
+    top: 20;
     left: 0;
     width: 100%;
     height: 100%;
@@ -58,6 +58,7 @@ hr {
 }
 
 .alt-background {
+    z-index: 2;
     background: linear-gradient(to top, #D1422E, #D2A62F);
     text-shadow: 0 0 5px black;
 }
@@ -90,14 +91,21 @@ hr {
     font-size: medium;
 }
 
+#backgroundVideo {
+    position: absolute;
+    z-index: -10;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
 .banner {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(99, 99, 99) url("Jupiter.jpg");
+    /* background: rgb(99, 99, 99) url("showcase.mp4");
     background-position: center;
     background-size: cover;
-    background-blend-mode: multiply;
+    background-blend-mode: multiply; */
     color: black;
 }
 
@@ -264,7 +272,6 @@ footer a:hover {
     align-self: center;
     margin: 10px;
 }
-
 
 @keyframes spin {
     0% {
