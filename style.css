@@ -11,7 +11,9 @@ body {
     margin: 0px auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Lato', 'Liberation Sans', 'Noto Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
     font-weight: normal;
 }
@@ -34,6 +36,19 @@ hr {
     width: 100%;
 }
 
+button {
+    font-family: 'Lato', 'Liberation Sans', 'Noto Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+    font-weight: normal;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+.sendButton {
+    background-color: transparent;
+    border: none;
+}
+
 .videoContainer {
     position: relative;
     width: 100%;
@@ -53,6 +68,12 @@ hr {
 
 .video:hover {
     box-shadow: 0 0 10px black;
+}
+
+ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
 }
 
 .content {
@@ -104,7 +125,7 @@ hr {
 #backgroundVideo {
     position: absolute;
     z-index: -10;
-    min-width: 100%; 
+    min-width: 100%;
     min-height: 100%;
 }
 
@@ -355,7 +376,7 @@ footer a:hover {
         width: 100%;
         padding-bottom: 56.25%;
     }
-    
+
 
     .discord-embed {
         width: 100%;
@@ -364,6 +385,10 @@ footer a:hover {
     .video {
         width: 100%;
         height: calc(width);
+    }
+
+    button {
+        font-size: 22px;
     }
 
 }
@@ -379,6 +404,20 @@ footer a:hover {
 
     .footer-links p {
         margin: 5px;
+    }
+
+    ul {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+
+    .button-line {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
     }
 
 }

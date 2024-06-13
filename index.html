@@ -6,6 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wings of Fire: The New World - Minecraft Server</title>
+    <script type="application/ld+json">
+        {
+          "@context" : "https://schema.org",
+          "@type" : "WebSite",
+          "name" : "Wings of Fire: The New World - Minecraft Server",
+          "url" : "https://woftnw.com/"
+        }
+      </script>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,10 +22,10 @@
 
 
     <div class="banner">
-        <video autoplay playsinline muted loop id="backgroundVideo">
+        <video autoplay plays inline muted loop id="backgroundVideo">
             <source src="showcase.mp4" type="video/mp4">
         </video>
-        <img id="bannerimg" src="Wings of Fire_ The New World.png">
+        <img id="bannerimg" src="Wings of Fire_ The New World.png" alt="Wings of Fire: The New World">
     </div>
 
     <div class="alt-background">
@@ -28,14 +37,14 @@
             <br>
 
             <div class="button-line">
-                <a href="https://discord.woftnw.org">
-                    <div class="button-primary">
+                <a href="https://discord.woftnw.org" target="_blank">
+                    <button class="button-primary">
                         Join the Discord server
-                    </div>
+                    </button>
                 </a>
-                <div class="button-secondary" onclick="revealWhitelist()">
+                <button class="button-secondary" onclick="revealWhitelist()" onkeydown="revealWhitelist()">
                     Don't have Discord?
-                </div>
+                </button>
             </div>
 
             <div style="display: flex; width: 550px; max-width: 100% ; justify-content: center; margin: 0 auto;">
@@ -43,7 +52,10 @@
                     <input type="text" placeholder=""
                         style="transition: height 0.3s; height: 0px; background-color: transparent;"
                         onfocus="tryWhitelist()">
-                    <img src="paper-plane-solid.svg" alt="Send" onclick="sendUsername()">
+                    <button class="sendButton" onclick="sendUsername()" onkeydown="sendUsername()">
+                        <img src="paper-plane-solid.svg" alt="Send">
+                    </button>
+                    
                 </div>
             </div>
 
@@ -76,7 +88,7 @@
 
             <div class="sidebyside">
                 <div class="secondary-background">
-                    <img src="screenshots/2023-08-02_12.27.27.png">
+                    <img src="screenshots/2023-08-02_12.27.27.png" alt="The RainWing village.">
                     <p class="caption">RainWing Village</p>
                 </div>
                 <div>
@@ -96,7 +108,7 @@
                         powers and abilities depending on which tribe you choose to play!</p>
                 </div>
                 <div class="secondary-background">
-                    <img src="screenshots/2023-07-28_11.57.32.png">
+                    <img src="screenshots/2023-07-28_11.57.32.png" alt="Jewel Hive">
                     <p class="caption">A view of Jewel Hive</p>
                 </div>
             </div>
@@ -105,7 +117,7 @@
 
             <div class="sidebyside">
                 <div class="secondary-background">
-                    <img src="screenshots/2023-08-29_15.04.17.png">
+                    <img src="screenshots/2023-08-29_15.04.17.png" alt="The Hub">
                     <p class="caption">The Hub</p>
                 </div>
                 <div>
@@ -115,6 +127,28 @@
                         become the ruler of a kingdom.</p>
                 </div>
             </div>
+
+            <h2>We also have all this neat stuff!</h2>
+            <ul>
+                <li>Absolutely no pay walled content</li>
+                <li>Advanced personal build protection</li>
+                <li>Toggle player combat on and off at will</li>
+                <li>10 custom cakes</li>
+                <li>25 custom berries</li>
+                <li>Dozens of custom elytra variants</li>
+                <li>A fair economy system</li>
+                <li>Easy shop creation</li>
+                <li>Discord and in-game PluralKit</li>
+                <li>Sit, lay, crawl, and spin</li>
+                <li>Unique events</li>
+                <li>In-game role-play & character system</li>
+                <li>Kind, capable, and helpful staff</li>
+                <li>Discord chat bridge</li>
+                <li>Discord Starboard</li>
+                <li>The Block Pit resource farm</li>
+                <li>The Instasmelter instant furnace</li>
+                <li>And even more!</li>
+            </ul>
 
             <hr>
 
@@ -193,14 +227,14 @@
             </p>
 
             <div class="button-line" style="margin: 0 0 20px;">
-                <a href="https://discord.woftnw.org">
-                    <div class="button-primary">
+                <a href="https://discord.woftnw.org" target="_blank">
+                    <button class="button-primary">
                         Join the Discord server
-                    </div>
+                    </button>
                 </a>
-                <div class="button-secondary" onclick="revealWhitelist()">
+                <button class="button-secondary" onclick="revealWhitelist()" onkeydown="revealWhitelist()">
                     Don't have Discord?
-                </div>
+                </button>
             </div>
 
         </div>
@@ -292,9 +326,9 @@
                 whitelistInput.style.backgroundColor = "white";
                 whitelistInput.style.width = "100%";
                 whitelistInput.children[0].style.display = "block";
-                whitelistInput.children[1].style.display = "block";
+                whitelistInput.children[1].children[0].style.display = "block";
                 whitelistInput.children[0].style.width = "auto";
-                whitelistInput.children[1].style.fill = "blue";
+                whitelistInput.children[1].children[0].style.fill = "blue";
                 whitelistInput.children[0].placeholder = "Put your username here!";
 
             }, 250);
