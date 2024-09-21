@@ -18,6 +18,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<div id="inspector">
+    <img hidden src="screenshots/2023-08-02_12.27.27.png" alt="The RainWing village.">
+    <button hidden onclick="uninspect()"></button>
+</div>
+
 <body>
 
 
@@ -88,7 +93,7 @@
 
             <div class="sidebyside">
                 <div class="secondary-background">
-                    <img src="screenshots/2023-08-02_12.27.27.png" alt="The RainWing village.">
+                    <img class="inspectable" onclick="inspect(this)" src="screenshots/2023-08-02_12.27.27.png" alt="The RainWing village.">
                     <p class="caption">RainWing Village</p>
                 </div>
                 <div>
@@ -108,7 +113,7 @@
                         powers and abilities depending on which tribe you choose to play!</p>
                 </div>
                 <div class="secondary-background">
-                    <img src="screenshots/2023-07-28_11.57.32.png" alt="Jewel Hive">
+                    <img class="inspectable" onclick="inspect(this)" src="screenshots/2023-07-28_11.57.32.png" alt="Jewel Hive">
                     <p class="caption">A view of Jewel Hive</p>
                 </div>
             </div>
@@ -117,7 +122,7 @@
 
             <div class="sidebyside">
                 <div class="secondary-background">
-                    <img src="screenshots/2023-08-29_15.04.17.png" alt="The Hub">
+                    <img class="inspectable" onclick="inspect(this)" src="screenshots/2023-08-29_15.04.17.png" alt="The Hub">
                     <p class="caption">The Hub</p>
                 </div>
                 <div>
@@ -157,14 +162,14 @@
                 <div class="secondary-background">
 
 
-                    <img src="screenshots/Pyrrhia (Medium).png" alt="Map of Pyrrha" style="width: unset;">
+                    <img class="inspectable" onclick="inspect(this)" src="screenshots/Pyrrhia (Medium).png" alt="Map of Pyrrha" style="width: unset;">
                     <p class="caption">Pyrrhia - 9856 x 8448 blocks</p>
                 </div>
 
                 <p></p>
 
                 <div class="secondary-background">
-                    <img src="screenshots/Pantala (Medium).png" alt="Map of Pantala" style="width: unset;">
+                    <img class="inspectable" onclick="inspect(this)" src="screenshots/Pantala (Medium).png" alt="Map of Pantala" style="width: unset;">
                     <p class="caption">Pantala - 5760 x 2632 blocks</p>
                 </div>
 
@@ -262,7 +267,7 @@
 
     <footer>
         <div>
-            <p><b>&copy; 2024 Wings of Fire: The New World</b></p>
+            <p><b>&copy; 2024 <a href="https://woftnw.org">Wings of Fire: The New World</b></a></p>
         </div>
         <div class="footer-links">
             <p><a href="https://discord.woftnw.org" , target="_blank">Discord</a></p>
@@ -278,6 +283,35 @@
     </footer>
 
     <script>
+
+        function inspect(element) {
+            const inspector = document.getElementById("inspector")
+            inspector.style.width = "100svw";
+            inspector.style.height = "100svh";
+            inspector.style.backgroundColor = "#00000055";
+            inspector.children[0].src = element.src;
+            inspector.children[0].hidden = false;
+            inspector.children[0].style.backgroundColor = "rgba(255, 255, 255, 1)";
+            inspector.children[1].hidden = false;
+            inspector.children[1].style.color = "rgba(255, 255, 255, 1)";
+        }
+
+        function uninspect() {
+            const inspector = document.getElementById("inspector")
+            inspector.style.width = "";
+            inspector.style.height = "";
+            inspector.style.backgroundColor = "";
+            inspector.children[0].hidden = true;
+            inspector.children[0].style.backgroundColor = "transparent";
+            inspector.children[1].hidden = true;
+            inspector.children[1].style.color = "transparent";
+        }
+
+        document.body.addEventListener('keydown', function(e) {
+            if (e.code === "Escape") {  //checks whether the pressed key is "Escape"
+                uninspect();
+            }
+        });
 
         document.addEventListener("DOMContentLoaded", function (event) {
 
@@ -410,7 +444,5 @@
     </script>
 
 </body>
-
-
 
 </html>

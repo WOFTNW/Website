@@ -2,6 +2,18 @@ html {
     margin: 0px;
 }
 
+#grid-container {
+    display:grid;
+    grid-template-rows:auto 1fr auto;
+    grid-template-columns:100%;
+ 
+    /* fallback height */
+    min-height:100vh;
+ 
+    /* new small viewport height for modern browsers */
+    min-height:100svh;
+ }
+
 body {
     font-family: 'Lato', 'Liberation Sans', 'Noto Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
     font-size: x-large;
@@ -41,6 +53,53 @@ button {
     font-weight: normal;
     font-size: 28px;
     color: white;
+    cursor: pointer;
+}
+
+#inspector {
+    background-color: #00000000;
+    width: 0;
+    height: 0;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#inspector img {
+    max-width: 90%;
+    max-height: 90%;
+    height: fit-content;
+    background-color: transparent;
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#inspector button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    color: transparent;
+    font-size: 100px;
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    height: min-content;
+    width: min-content;
+    line-height: 0.5;
+}
+#inspector button:hover {
+    text-shadow: 0 0 10px white;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#inspector button::after {
+    content: "\00d7";
+}
+
+.inspectable {
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.inspectable:hover {
+    box-shadow: 0 0 10px white;
     cursor: pointer;
 }
 
@@ -118,7 +177,7 @@ ul {
 
 .disclaimer {
     text-transform: uppercase;
-    color: #ccc;
+    color: #949494;
     font-size: medium;
 }
 
